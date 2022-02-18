@@ -46,3 +46,69 @@ document.write(Math.round(3.6) + "<br> <br>")
 //Getting user input
 var myname = window.prompt("Enter your name: ");
 alert("Your name is " + myname);
+
+//Accessing HTML using JS
+var header = document.getElementById("myheader");
+header.style = "color: white; background-color:red";
+
+//arrays
+var luckyNumbers = [4, 8, 15, 16, "twenty", false];
+// indexes:         0  1   2   3      4        5
+
+document.write(luckyNumbers + "<br>");
+
+luckyNumbers[0] = 90;
+
+document.write(luckyNumbers + "<br>");
+
+document.write(luckyNumbers.length + "<br><br>");
+
+//N Dimensional Arrays
+
+var numberGrid =[[1,2],[3,4]];
+
+document.write(numberGrid + "<br>"); //returns all array elements
+document.write(numberGrid[0] + "<br>"); //returns 1,2
+document.write(numberGrid[0][0] + "<br>"); //returns 1
+document.write(numberGrid[1][1] + "<br><br>"); //returns 4
+
+//Array functions
+var friends1 = [];
+friends1.push("Oscar");
+friends1.push("Angella");
+friends1.push("John");
+friends1.pop("Oscar");
+
+var friends2 = new Array();
+friends2.push("Fred");
+friends2.push("Tau G");
+friends1.push("Rex");
+friends1.pop("Tau G");
+
+document.write(friends1 + "<br>");
+document.write(friends2 + "<br>");
+document.write(friends1.sort() + "<br>");
+document.write(friends1.indexOf("Angella")+ "<br><br>");
+
+//Objects
+var student = {
+    name: "John Doe",
+    major: "Computer Science",
+    age: 19,
+    gpa: 3.75
+}
+
+student.name = "Jane Doe";
+document.write("Name: " + student.name + "<br>");
+document.write("Major: " + student.major + "<br>");
+document.write("Age: " + student.age + "<br>");
+document.write("GPA: " + student.gpa + "<br><br>");
+
+//Functions
+function addNumbers(num1, num2){
+    return num1 + num2;
+}
+
+//calling the function
+document.write(addNumbers(4, 60));
+
