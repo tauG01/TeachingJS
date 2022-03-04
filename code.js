@@ -110,5 +110,102 @@ function addNumbers(num1, num2){
 }
 
 //calling the function
-document.write(addNumbers(4, 60));
+document.write(addNumbers(4, 60) + "<br><br>");
 
+//Event handlers
+var header = document.getElementById("myheader");
+
+header.addEventListener("click", function(){
+    alert("Clicked "+ header.id);
+})
+
+var title = document.getElementById("mytitle");
+
+title.addEventListener("mouseover", function(){
+    alert("This is page title "+ title.id);
+})
+
+//if else
+var year1GPA = window.prompt("Enter your year 1 GPA: ");
+var year2GPA = window.prompt("Enter your year 2 GPA: ");
+var year3GPA = window.prompt("Enter your year 3 GPA: ");
+
+if (year1GPA > year2GPA && year1GPA > year3GPA){
+    alert("You performed well in your first year");
+}else if(year2GPA > year1GPA && year2GPA > year3GPA){
+    alert("You performed well in your second year");
+}else if((year3GPA > year1GPA && year3GPA > year2GPA)){
+    alert("You performed well in your third year");
+}else{
+    alert("Not defined");
+}
+
+//Switch statements
+var myGrade = window.prompt("Enter your grade: ");
+
+switch (myGrade){
+    case "A":
+        alert("You got a distinction");
+        break;
+    case "B":
+        alert("You got a credit");
+        break;
+    case "C":
+        alert("You got a pass");
+        break;
+    case "F":
+        alert("You got a fail");
+        break;
+    default:
+        alert(myGrade + " is not defined");
+}
+
+//Loops
+
+//While loop
+var index1 = 1;
+
+while(index1 <= 5){
+    document.write(index1);
+    index1 ++;
+}
+
+document.write("<br><br>");
+
+//Do while loop
+var index2 = 5;
+
+do{
+    document.write(index2);
+    index2 ++;
+}while(index2 <= 9);
+
+document.write("<br><br>");
+
+//for loop
+for(var index3=1; index3 <= 5; index3++){
+    document.write(index3);
+}
+
+document.write("<br><br>");
+
+//forEach
+var luckyNums = [4, 8, 15, 16, 23, 42];
+
+luckyNums.forEach(function(luckyNum){
+    document.write(luckyNum + " , ")
+});
+
+document.write("<br><br>");
+
+//Exception catching
+try{
+    //throw "Something went wrong"
+    var x = y + 9;
+}catch(err){
+    document.write(err)
+}finally{
+    //this code always gets executed
+}
+
+//Classes & Objects
