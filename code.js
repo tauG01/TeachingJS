@@ -1,3 +1,6 @@
+//importing
+//import {Book} from './book.js';
+
 //3 DIFFERENT WAYS TO DISPLAY INFORMATION IN JS
 
 //1. printing
@@ -208,4 +211,82 @@ try{
     //this code always gets executed
 }
 
+document.write("<br><br>");
+
 //Classes & Objects
+
+//class
+class Book{
+    
+    //constructor
+    constructor(title, author){
+        this.title = title;
+        this.author = author;
+    }
+
+    //function
+    readBook(){
+        document.write("Reading " + this.title + " by " + this.author);
+    }
+}
+
+
+//object
+var book1 = new Book("Harry Potter", "JK Rowling");
+
+document.write (book1.title + "<br>");
+book1.readBook();
+
+document.write("<br><br>");
+
+//inheritance
+
+class Chef{
+    constructor(name, age){
+        this.name = name;
+        this.age = age;
+    }
+
+    makeChicken(){
+        document.write("The chef makes chicken <br>");
+    }
+
+    makeSalad(){
+        document.write("The chef makes salad <br>");
+    }
+
+    makeSpecialDish(){
+        document.write("The chef makes special dish <br>");
+    }
+}
+
+class ItalianChef extends Chef{
+    constructor(name, age, countryOfOrigin){
+        super(name, age);
+        this.countryOfOrigin = countryOfOrigin;
+    }
+
+    makePasta(){
+        document.write("The chef makes pasta <br>");
+    }
+
+    //overrridden
+    makeSpecialDish(){
+        document.write("The chef makes chicken parm <br>");
+    }
+}
+
+var myChef = new Chef("John Doe", 50);
+document.write("Chef: " + myChef.name + "<br>");
+document.write("Age: "+ myChef.age + "<br>");
+myChef.makeSpecialDish();
+
+document.write("<br><br>");
+
+var myItalianChef = new ItalianChef("Jane Doe", 55, "Italy");
+document.write("Chef: " + myItalianChef.name + "<br>");
+document.write("Age: "+ myItalianChef.age + "<br>");
+document.write("Country of origin: "+ myItalianChef.countryOfOrigin + "<br>");
+myItalianChef.makeSpecialDish();
+
+
