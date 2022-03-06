@@ -1,6 +1,3 @@
-//importing
-//import {Book} from './book.js';
-
 //3 DIFFERENT WAYS TO DISPLAY INFORMATION IN JS
 
 //1. printing
@@ -288,5 +285,3 @@ document.write("Chef: " + myItalianChef.name + "<br>");
 document.write("Age: "+ myItalianChef.age + "<br>");
 document.write("Country of origin: "+ myItalianChef.countryOfOrigin + "<br>");
 myItalianChef.makeSpecialDish();
-
-
